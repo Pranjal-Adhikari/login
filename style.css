@@ -1,0 +1,246 @@
+PHP Login Form: Guide to Create a Login Form in PHP
+Lesson 4 of 11By Ravikiran A S
+
+Last updated on Oct 28, 202225356415
+A Complete Guide to Create a PHP Login Form
+PreviousNext
+Table of Contents
+Step 1- Create a HTML PHP Login FormStep 2: Create a CSS Code for Website Design Step 3: Create a Database Table Using MySQLStep 4: Open a Connection to a MySQL DatabaseStep 5 - Create a Logout SessionView More
+PHP is a server-side scripting programming language, and MySQL is an open-source relational database management system. These two frameworks, when used together, are capable of providing highly unique solutions, like creating a login form. 
+
+PHP_1.
+
+In this tutorial, you will look at a simple login system using PHP and MySQL.
+
+Before getting started with the code-related aspects of PHP, let’s have a look at the prerequisites to create a login form.
+
+Prerequisites:
+
+Knowledge of HTML, CSS, PHP, and MySQL
+Microsoft Visual Studio (For writing the code)
+Installation of XAMPP
+Let’s start with the first topic, i.e., creating a PHP login form.
+
+Post Graduate Program: Full Stack Web Development
+in Collaboration with Caltech CTMEENROLL NOWPost Graduate Program: Full Stack Web Development
+Step 1- Create a HTML PHP Login Form
+To create a login form, follow the steps mentioned below:
+
+Open Microsoft Visual Studio -> create a new file and name it as an SL file
+Now, on a page, write the code mentioned in the example below
+The HTML program will create a webpage form that will allow users to log in themselves
+The code consists of HTML elements. The basic elements are:
+
+<title>
+
+The element displays the heading of the document. The label can be only in the text format, and it shows the text in the browser's tab.
+
+<link> 
+
+It creates a link between the working document and an external resource.
+
+<form> 
+
+The element defines the user input included while creating an HTML. 
+
+<input type>
+
+It displays a one-line input field.
+
+<label>
+
+It defines a label for many form elements. It majorly indicates the radio button/checkbox.
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>LOGIN</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+     <form action="login.php" method="post">
+
+        <h2>LOGIN</h2>
+
+        <?php if (isset($_GET['error'])) { ?>
+
+            <p class="error"><?php echo $_GET['error']; ?></p>
+
+        <?php } ?>
+
+        <label>User Name</label>
+
+        <input type="text" name="uname" placeholder="User Name"><br>
+
+        <label>Password</label>
+
+        <input type="password" name="password" placeholder="Password"><br> 
+
+        <button type="submit">Login</button>
+
+     </form>
+
+</body>
+
+</html>
+
+New Course: Full Stack Development for Beginners
+Learn Git Command, Angular, NodeJS, Maven & MoreENROLL NOWNew Course: Full Stack Development for Beginners
+Step 2: Create a CSS Code for Website Design 
+Next comes the CSS sheet. Now, the aim is to create a cascading style sheet (CSS) file to improve the design of the webpage.
+
+The code for the .css file is below:
+
+body {
+
+    background: #91a716;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    flex-direction: column;
+
+}
+
+*{
+
+    font-family: cursive;
+
+    box-sizing: padding-box;
+
+}
+
+form {
+
+    width: 1000px;
+
+    border: 3px solid rgb(177, 142, 142);
+
+    padding: 20px;
+
+    background: rgb(85, 54, 54);
+
+    border-radius: 20px;
+
+}
+
+h2 {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+input {
+
+    display: block;
+
+    border: 2px solid #ccc;
+
+    width: 95%;
+
+    padding: 10px;
+
+    margin: 10px auto;
+
+    border-radius: 5px;
+
+}
+
+label {
+
+    color: #888;
+
+    font-size: 18px;
+
+    padding: 10px;
+
+}
+
+button {
+
+    float: right;
+
+    background: rgb(35, 174, 202);
+
+    padding: 10px 15px;
+
+    color: #fff;
+
+    border-radius: 5px;
+
+    margin-right: 10px;
+
+    border: none;
+
+}
+
+button:hover{
+
+    opacity: .10;
+
+}
+
+.error {
+
+   background: #F2DEDE;
+
+   color: #0c0101;
+
+   padding: 10px;
+
+   width: 95%;
+
+   border-radius: 5px;
+
+   margin: 20px auto;
+
+}
+
+h1 {
+
+    text-align: center;
+
+    color: rgb(134, 3, 3);
+
+}
+
+a {
+
+    float: right;
+
+    background: rgb(183, 225, 233);
+
+    padding: 10px 15px;
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    margin-right: 10px;
+
+    border: none;
+
+    text-decoration: none;
+
+}
+
+a:hover{
+
+    opacity: .7;
+
+}
+
